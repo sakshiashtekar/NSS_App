@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form action="" [formGroup]="form" (submit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required formControlName="email"></ion-input>  
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="text" required formControlName="pass"></ion-input>  
+    </ion-item>
+    <ion-button class="ion-margin-top" expand="block" type="submit" [disabled]="form.invalid">Login</ion-button>
+  </form>
+</ion-content>
